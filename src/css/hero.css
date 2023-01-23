@@ -1,0 +1,151 @@
+:root {
+    --section-width: 83%;
+}
+
+.hero--container {
+    width: 100%;
+    height: fit-content;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hero {
+    width: 100%;
+    min-height: 80vh;
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: .8;
+    background: url("../assets/hero.webp") center top /100%;
+    background-size: contain;
+}
+
+.hero--title {
+    opacity: 1;
+    font-size: 4rem;
+    font-weight: bold;
+    
+    background: linear-gradient(to right, greenyellow 33%, aqua);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+
+}
+
+.hero--subtitle {
+    opacity: 1;
+    color: snow;
+    font-size: large;
+}
+
+
+.container {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+
+    margin-top: .5rem;
+    z-index: 1;
+    box-shadow: 0 -2rem 2rem rgb(35,35,35);
+    
+}
+
+.hero--input {
+    width: var(--section-width);
+    margin: auto;
+
+    position: relative;
+    display: flex;
+    
+    justify-content: space-between;
+    flex-direction: row;
+    
+    align-items: center;
+    
+}
+
+.hero--input---element {
+    position: relative;
+
+    width: 85%;
+    height: 3em;
+
+    border-radius: 10px;
+    border: 3px solid slateblue;
+
+    font-size: large;
+    font-weight: lighter;
+    text-indent: 3%;
+
+    resize: none;
+    outline: none;
+}
+
+.hero--input---element::-webkit-input-placeholder {
+    font-weight: lighter;
+    text-indent: 3%;
+}
+
+.hero--input---generate {
+    z-index: 1;
+    width: max-content;
+
+    border: 0;
+    border-collapse: collapse;
+    border-radius: 3px;
+
+    height: 3.5em;
+   
+    margin-left: .5rem;
+    padding: 1px 6px;
+
+    font-size: medium;
+    font-weight: bold;
+
+    color: #2b2b2b;
+    background-color: #62ff93;
+    left: 0;
+}
+
+
+.hero--ideas {
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.hero--ideas---cards {
+    width: var(--section-width);
+    
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: safe;
+    align-items: center;
+}
+
+
+.suggestion_card:hover {
+    transform: scale(1.1);
+}
+
+.hero--ideas---title {
+    text-align: left;
+}

@@ -1,0 +1,16 @@
+.generation {
+    width: 100%;
+    height: 350px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    
+    justify-content: center;
+    align-items: center;
+
+    margin: 3rem 0;
+}
+
+.generation--img {
+    height: 256px;
+}

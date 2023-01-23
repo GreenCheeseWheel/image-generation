@@ -1,0 +1,14 @@
+.main--section {
+    width: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-items: center;
+    
+    color: snow;
+}
+
+
