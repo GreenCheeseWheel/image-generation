@@ -1,5 +1,7 @@
 header {
     width: 100%;
+    height: 65px;
+
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -17,6 +19,7 @@ header {
 
 .header--menu {
     width: 65%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -25,10 +28,11 @@ header {
 
     justify-content: space-around;
     align-items: center;
+    
 }
 
 .header--menu > * {
-    margin-right: 10px;
+    margin-right: 5px;
     color: inherit;
 }
 
@@ -39,7 +43,9 @@ header {
     color: inherit;
 }
 
+
 .header--menu---item {
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -47,29 +53,103 @@ header {
     text-decoration: none;
     color: inherit;
 
+    cursor: pointer;
     letter-spacing: .5px;
     font-size: small;
     font-weight: 600;
 }
 
 .header--menu---item > img {
-    height: 1.2rem;
-    margin-left: 5px;
+    height: 1rem;
+    margin-left: 3px;
 }
+
+.dropdown {
+    height: 100%;
+    width: fit-content;
+    position: relative;
+}
+
+.dropdown--menu {    
+    min-width: fit-content;
+    min-height: 200px;
+    padding: .5rem;
+
+    opacity: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    position: absolute;
+    text-align: left;
+    left: 0;
+    top: 100%;
+    transform: translateY(-10px);
+
+    pointer-events: none;
+
+    color: black;
+    background-color: white;
+    padding: .7rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .7);
+
+    border: 0;
+    border-radius: 5px;
+
+    text-align: left;
+    transition: opacity 300ms ease-in-out, transform 550ms ease-in-out;
+
+}
+
+.dropdown--menu---section {
+    margin: 0 .7rem;
+    height: 100%;
+}
+
+.dropdown--title {
+    width: max-content;
+    top: 0;
+    margin-top: 0;
+    text-align: left;
+    text-justify: distribute-all-lines;
+}
+
+.dropdown--menu---options {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown--options---item {
+    margin: 0;
+
+    cursor: pointer;
+
+    color: rgb(45, 45, 45);
+    font-weight: lighter;
+    font-size: small;
+    padding: 10px;
+    
+}
+
+.dropdown--options---item:hover {
+    background-color: rgba(125, 125, 125, .6);
+    
+}
+
 
 .header--signin {
     display: flex;
     height: 40px;
     padding-left:  16px;
     padding-right: 16px;
-    margin-right: 5%;
+    margin-right: 25px;
 
     border-radius: 20px;
     border: 0;
     
+    font-size: 14px;
+    font-weight: lighter;
     text-decoration: none;
-    font-size: large;
-    letter-spacing: .3px;
+    letter-spacing: 1px;
 
     align-items: center;
     

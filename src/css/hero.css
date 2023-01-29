@@ -13,7 +13,7 @@
 
 .hero {
     width: 100%;
-    min-height: 80vh;
+    min-height: 450px;
     z-index: -1;
 
     display: flex;
@@ -21,19 +21,22 @@
     flex-wrap: wrap;
 
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 
-    opacity: .8;
-    background: url("../assets/hero.webp") center top /100%;
-    background-size: contain;
+    opacity: .9;
+    background: url("../assets/hero_two.jpg") center top/100% no-repeat;
+    
 }
 
 .hero--title {
+    width: 50%;
+    margin-bottom: .6rem;
+
     opacity: 1;
     font-size: 4rem;
     font-weight: bold;
     
-    background: linear-gradient(to right, greenyellow 33%, aqua);
+    background: linear-gradient(to right, springgreen, greenyellow,  aquamarine);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -42,21 +45,28 @@
 }
 
 .hero--subtitle {
+    width: 50%;
+    margin-bottom: 50px;
+
     opacity: 1;
     color: snow;
-    font-size: large;
+
+    font-weight: 600;
+    font-size: 14px;
 }
 
 
 .container {
     width: 100%;
     height: 25vh;
+
+    padding-top: 1em;
+
     display: flex;
     flex-direction: column;
     
     justify-content: center;
 
-    margin-top: .5rem;
     z-index: 1;
     box-shadow: 0 -2rem 2rem rgb(35,35,35);
     
@@ -80,10 +90,10 @@
     position: relative;
 
     width: 85%;
-    height: 3em;
+    height: 3.5em;
 
     border-radius: 10px;
-    border: 3px solid slateblue;
+    border: 4px solid rgb(65, 65, 65);
 
     font-size: large;
     font-weight: lighter;
@@ -99,21 +109,27 @@
 }
 
 .hero--input---generate {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
     z-index: 1;
     width: max-content;
 
     border: 0;
     border-collapse: collapse;
-    border-radius: 3px;
+    border-radius: 10px;
 
-    height: 3.5em;
+    height: 4em;
    
     margin-left: .5rem;
-    padding: 1px 6px;
+    padding: 1px 15px;
 
+    text-decoration: none;
     font-size: medium;
     font-weight: bold;
 
+    cursor: pointer;
     color: #2b2b2b;
     background-color: #62ff93;
     left: 0;
@@ -128,6 +144,12 @@
     align-items: center;
 }
 
+
+.hero--ideas---title {
+    text-align: left;
+    margin-right: 7px;
+}
+
 .hero--ideas---cards {
     width: var(--section-width);
     
@@ -139,6 +161,8 @@
 
     justify-content: safe;
     align-items: center;
+
+    font-size: small;
 }
 
 
@@ -146,6 +170,3 @@
     transform: scale(1.1);
 }
 
-.hero--ideas---title {
-    text-align: left;
-}

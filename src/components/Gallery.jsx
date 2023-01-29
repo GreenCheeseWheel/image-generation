@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../data";
 
-import "../css/gallery.css"
+import "..//css/gallery.css"
 
 function ImgCard(props) 
 {
@@ -17,7 +17,8 @@ function Gallery()
 {
     var scrollAmount = 0;
     var imgArray = data.galleryImages;
-    imgArray = imgArray.map((url) => <ImgCard img={url}/>);
+    let key = 0;
+    imgArray = imgArray.map((url) => <ImgCard key={key++} img={url}/>);
 
     const scrollLeft = () => {
         const slider = document.getElementsByClassName("slider--content").item(0);
