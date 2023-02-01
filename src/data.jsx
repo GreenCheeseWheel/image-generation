@@ -5,11 +5,9 @@ export default {
     "Religious procession during winter, in Russia"
 ],
     galleryImages: [
-        "./gallery/horseAI.png",
+        "./gallery/cityNightTwoAI.jpg",
         "./gallery/cityAI.png",
-        "./gallery/horseAI.png",
-        "./gallery/horseAI.png",
-        "./gallery/horseAI.png",
+        "./gallery/cityNightAI.jpg",
         "./gallery/horseAI.png"
     ]
 

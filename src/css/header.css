@@ -161,3 +161,25 @@ header {
 li {
     display: inline;
 }
+
+@media screen and (max-width: 870px) {
+
+    header {
+        justify-content: space-around;
+    }
+
+    .dropdown:not(.stable) {
+        display: none;
+        width: fit-content;
+
+    }
+
+    .dropdown--menu {
+        display: flex;
+        flex-direction: column;
+        max-height: 15vh;
+
+        overflow-y: scroll;
+    }
+
+}

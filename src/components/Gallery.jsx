@@ -22,8 +22,8 @@ function Gallery()
 
     const scrollLeft = () => {
         const slider = document.getElementsByClassName("slider--content").item(0);
-        console.log(scrollAmount);
-        scrollAmount = (scrollAmount >= 1100) ? scrollAmount : scrollAmount + 256;
+        
+        scrollAmount = (scrollAmount >= 450) ? scrollAmount : scrollAmount + 256;
         slider.scrollTo(
             {
                 top: 0,
@@ -35,7 +35,7 @@ function Gallery()
 
     const scrollRight = () => {
         const slider = document.getElementsByClassName("slider--content").item(0);
-        console.log(scrollAmount);
+        
         scrollAmount = (scrollAmount <= 0) ? scrollAmount : scrollAmount -256;
         slider.scrollTo(
             {

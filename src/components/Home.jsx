@@ -7,6 +7,7 @@ import "../css/home.css"
 import Header from "./Header"
 import Hero from "./Hero"
 import Gallery from "./Gallery";
+import Showcase from "./Showcase";
 import Footer from "./Footer";
 
 export default function Home(props)
@@ -45,6 +46,7 @@ export default function Home(props)
                 <Header />                    
                 <Hero />
                 <Gallery />
+                <Showcase />
                 <Footer />
                 
             </section>

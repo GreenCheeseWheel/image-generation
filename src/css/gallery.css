@@ -1,6 +1,11 @@
 .gallery {
     width: 100%;
-    margin: auto;
+    min-height: 80vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .gallery--title {

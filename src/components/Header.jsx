@@ -7,7 +7,7 @@ function Header()
 
     const scrollChange = (event) => 
     {   
-        var scroll = window.pageYOffset;
+        var scroll = window.scrollY;
         const header = document.getElementsByTagName("header").item(0);
         
         if(scroll <= 50) 
@@ -80,7 +80,7 @@ function Header()
             <div className="header--menu" onMouseOver={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
                 <h3>TopAI</h3>
 
-                <div className="dropdown" >
+                <div className="dropdown stable" >
                     <a className="header--menu---item" >Editing tools <img src={arrow}></img></a>
                     <div className="dropdown--menu">
                         <section className="dropdown--menu---section">
@@ -108,7 +108,7 @@ function Header()
                     </div>
                 </div>
 
-                <div className="dropdown" >
+                <div className="dropdown stable" >
                     <a className="header--menu---item">Create <img src={arrow}></img></a>
                     <div className="dropdown--menu" >
                         <section className="dropdown--menu---section">

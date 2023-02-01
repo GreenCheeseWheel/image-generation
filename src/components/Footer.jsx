@@ -17,39 +17,41 @@ function Footer()
             </div>
 
             <section className="footer--listing">
-                <div>Hello Biatch</div>
-                
-                <ul>
-                    <li><a>Company</a></li>
-                    <li><a>About us</a></li>
-                    <li><a>Privacy policy</a></li>
-                    <li><a>Terms of service</a></li>
-                    <li><a>Contact us</a></li>
-                    <li><a>Press</a></li>
-                    <li><a>Partners</a></li>
+                <ul className="listing--list stable">
+                    <li className="listing--item listing--title">TopAI</li>
+                    <li className="listing--item"><span>All-in-one photo editor for easy editing and better design</span></li>
                 </ul>
-                <ul>
-                    <li>Support</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul className="listing--list stable">
+                    <li className="listing--item listing--title">Company</li>
+                    <li className="listing--item"><a>About us</a></li>
+                    <li className="listing--item"><a>Privacy policy</a></li>
+                    <li className="listing--item"><a>Terms of service</a></li>
+                    <li className="listing--item"><a>Contact us</a></li>
+                    <li className="listing--item"><a>Press</a></li>
+                    <li className="listing--item"><a>Partners</a></li>
+                </ul>
+                <ul className="listing--list stable">
+                    <li className="listing--item listing--title">Support</li>
+                    <li className="listing--item"><a>Help center</a></li>
+                    <li className="listing--item"><a>Blog & tutorials</a></li>
+                    <li className="listing--item"><a>Pricing</a></li>
+                    <li className="listing--item"><a>Student discount</a></li>
+                    <li className="listing--item"><a>NGO</a></li>
 
                 </ul>
-                <ul>
-                    <li>Platform</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul className="listing--list">
+                    <li className="listing--item listing--title">Platform</li>
+                    <li className="listing--item"><a>TopAI for Mac</a></li>
+                    <li className="listing--item"><a>TopAI for Windows</a></li>
+                    <li className="listing--item"><a>TopAI mobile app</a></li>
 
                 </ul>
-                <ul>
-                    <li>Products</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul className="listing--list">
+                    <li className="listing--item listing--title">Products</li>
+                    <li className="listing--item"><a>GO art</a></li>
+                    <li className="listing--item"><a>NFT creator</a></li>
+                    <li className="listing--item"><a>Fotor SDK</a></li>
+                    <li className="listing--item"><a>TopAI stock photos</a></li>
 
                 </ul>
             
@@ -59,7 +61,7 @@ function Footer()
             <div className="footer--copy">
                 
                 <div className="footer--copy---top"></div>
-                <span>&copy; 2023 Everlasting, All Rights Reserved</span>
+                <span className="footer--copy---text">&copy; 2023 Everlasting, All Rights Reserved</span>
                 
             </div>
         </footer>
