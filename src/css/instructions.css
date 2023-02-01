@@ -1,0 +1,59 @@
+.instructions {
+    width: 80%;
+    min-height: 50vh;
+    margin: 5rem 50px;
+    margin-bottom: 2rem;
+    border: 2px solid whitesmoke;
+}
+
+.instructions--description {
+    width: 80%;
+    margin: auto;
+}
+
+.instructions--lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.instructions--correct {
+    width: 45%;
+
+    margin-bottom: 35px;
+    padding: 1rem 5px;
+    text-align: center;
+
+    border: 1px solid grey;
+}
+
+.instructions--item {
+
+    display: block;
+    margin-top: 10px;
+    
+}
+
+.instructions--item---highlight {
+    text-decoration: underline;
+}
+
+.instructions--item:not(.instructions--item:first-child)::before {
+    margin-right: 5px;
+}
+
+.correct::before {
+    content: "\2713";
+}
+
+.incorrect::before {
+    content: "\2716";
+}
+
+@media screen and (max-width: 950px) {
+    .instructions--lists {
+        flex-direction: column;
+        align-items: center;
+    }    
+
+}

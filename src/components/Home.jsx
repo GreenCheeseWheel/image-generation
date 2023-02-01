@@ -8,7 +8,10 @@ import Header from "./Header"
 import Hero from "./Hero"
 import Gallery from "./Gallery";
 import Showcase from "./Showcase";
+import Instructions from "./Instructions";
 import Footer from "./Footer";
+
+
 
 export default function Home(props)
 {
@@ -47,6 +50,7 @@ export default function Home(props)
                 <Hero />
                 <Gallery />
                 <Showcase />
+                <Instructions />
                 <Footer />
                 
             </section>

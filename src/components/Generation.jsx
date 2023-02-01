@@ -13,7 +13,7 @@ function Generation(props)
         <section className="generation">
             <img src={imageUrl} alt="Generated Img Here" className="generation--img"></img>
             <a href={imageUrl} className="generation--download" download>Download your image</a>
-            <Link to="/" className="generation--return">Not happy with your results? Try again!</Link>
+            <Link to="/" className="generation--return">Not happy with your results? Try again! (Maybe you weren't specific enough)</Link>
         </section>
     );
 }

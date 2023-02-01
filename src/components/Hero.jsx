@@ -6,6 +6,9 @@ import Card from "./Card"
 import data from "../data"
 import { Link } from "react-router-dom";
 
+
+import dogImg from "../assets/showcase/dog.webp"
+
 function Hero(props)
 {
     const {setImageUrl} = useContext(Contexto);
@@ -29,7 +32,7 @@ function Hero(props)
     const clickHandler = () => 
     {
         const inputElement = document.getElementsByClassName("hero--input---element").item(0);
-        setImageUrl(inputElement.value.trim());
+        setImageUrl(dogImg);
     }
 
     
