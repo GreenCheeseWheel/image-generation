@@ -1,5 +1,6 @@
 import React, {useContext, useState} from "react";
 import {Contexto} from "../App"
+import { OpenAIApi, Configuration } from "openai";
 
 import "../css/hero.css"
 import Card from "./Card"
@@ -13,6 +14,16 @@ function Hero(props)
 {
     const {setImageUrl} = useContext(Contexto);
     const textData = data.ideasText;
+    var apiKey = " " + import.meta.env.VITE_OPEN_KEY;
+    apiKey = apiKey.trim().replaceAll("@", "");
+
+    const config = new Configuration({
+        apiKey: apiKey
+    });
+    
+    const openai = new OpenAIApi(config);
+
+    console.log(apiKey);
 
     const copyInput = (event) => 
     {
@@ -34,7 +45,19 @@ function Hero(props)
     const clickHandler = () => 
     {
         const inputElement = document.getElementsByClassName("hero--input---element").item(0);
-        setImageUrl(dogImg);
+        const value = inputElement.value;
+
+        async () => {
+            const response = await openai.createImage({
+                prompt: genPrompt, 
+                n: 1, 
+                size: "256x256"
+                }
+            );
+    
+            setImageUrl(response.data.data[0].url);
+        }
+
     }
 
     /* RANDOMIZE TEXT INSIDE THE SUGGESTION CARDS */
