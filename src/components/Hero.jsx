@@ -12,7 +12,7 @@ import dogImg from "../assets/showcase/dog.webp"
 function Hero(props)
 {
     const {setImageUrl} = useContext(Contexto);
-
+    const textData = data.ideasText;
 
     const copyInput = (event) => 
     {
@@ -29,18 +29,75 @@ function Hero(props)
         inputElement.value = await navigator.clipboard.readText(); 
     };
 
+
+    /* HANDLES GENERATING AN IMAGE EVENT  */
     const clickHandler = () => 
     {
         const inputElement = document.getElementsByClassName("hero--input---element").item(0);
         setImageUrl(dogImg);
     }
 
-    
-    const textData = data.ideasText;
+    /* RANDOMIZE TEXT INSIDE THE SUGGESTION CARDS */
+    const randomizeText = (event) => 
+    {
+        event.preventDefault();
 
-    const [cardArray, setCardArray] = useState( textData.map((text) => <Card key={text} text={text} clickHandler={copyInput}/>) );
-    
+        var cardArr = [];
+        var indexArr = [];
 
+        let i = 0;
+        while( i < 6)
+        {
+            
+            var randIndex = Math.floor( Math.random() * textData.length );
+            
+
+            if( indexArr.indexOf(randIndex) === -1 )
+            {
+                cardArr.push(<Card key={textData[randIndex]} text={textData[randIndex]} clickHandler={copyInput}  /> );
+                indexArr.push(randIndex);
+                i++;
+            }
+            
+            
+        }
+        
+        
+        setCardArray(cardArr);
+
+    }
+
+    
+    /* INITIALIZE CARD ARRAY RANDOMLY */
+
+    const [cardArray, setCardArray] = useState( () => {
+
+        var cardArr = [];
+        var indexArr = [];
+
+        let i = 0;
+        while( i < 6)
+        {
+            
+            var randIndex = Math.floor( Math.random() * textData.length );
+            
+
+            if( indexArr.indexOf(randIndex) === -1 )
+            {
+                cardArr.push(<Card key={textData[randIndex]} text={textData[randIndex]} clickHandler={copyInput}  /> );
+                indexArr.push(randIndex);
+                i++;
+            }
+            
+            
+        }
+
+        return cardArr;
+
+    } 
+    );
+
+    
 
 
     return (
@@ -64,7 +121,7 @@ function Hero(props)
 
             <section className="hero--ideas">
                 <div className="hero--ideas---cards">
-                    <h4 className="hero--ideas---title">↺ No ideas? Try these!</h4>
+                    <h4 className="hero--ideas---title" onClick={randomizeText}>↺ No ideas? Try these!</h4>
                     {cardArray}
                 </div>
             </section>

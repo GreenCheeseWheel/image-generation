@@ -148,6 +148,7 @@
 .hero--ideas---title {
     text-align: left;
     margin-right: 7px;
+    cursor: pointer;
 }
 
 .hero--ideas---cards {
