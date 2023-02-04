@@ -34,6 +34,8 @@ footer {
 }
 
 .footer--listing {
+    width: 100%;
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
@@ -42,28 +44,86 @@ footer {
     margin-left: 0;
 }
 
+
 .listing--title {
+    height: 45px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    align-items: center;
+    justify-content: left;
+
     font-weight: bolder;
-    font-size: large;
+    font-size: larger;
+    pointer-events: none;
+    
 }
+
+
+.footer--logo {
+    height: 100%;
+    margin: auto;
+}
+
 
 .listing--item {
     display: block;
     width: fit-content;
     text-align: left;
-}
-
-.listing--item:not(.listing--title) {
     font-weight: lighter;
     margin-top: 15px;
     cursor: pointer;
 }
 
-.listing--item:not(.listing--title):hover {
+.listing--item:hover {
     color:rgba(0, 0, 0, .75);
 
 }
 
+.noclick {
+    width: 100%;
+    display: block;
+    font-weight: lighter;
+    margin-top: 30px;
+
+    text-align: center;
+
+}
+
+
+/* SOCIAL NETWORKS SECTION */
+
+.footer--social {
+    width: 60%;
+    height: 27px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social--item {
+    height: 25px;
+}
+
+.social--item:nth-child(2) {
+    height: calc( 23px);
+}
+
+.social--logo {
+    height: 20px;
+    cursor: pointer;
+}
+
+
+
+
+/* COPYRIGHT SECTION */
 
 .footer--copy {
     position: relative;
@@ -87,6 +147,8 @@ footer {
 .footer--copy---text {
     margin-bottom: .5rem;
 }
+
+
 
 @media screen and (max-width: 850px) {
     .footer--listing {

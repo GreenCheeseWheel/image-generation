@@ -1,6 +1,10 @@
 import React from "react";
 import "../css/header.css"
+
 import arrow from "../assets/down-arrow.svg"
+
+import logo from "../assets/logo.svg"
+import logoTwo from "../assets/logo2.svg"
 
 function Header()
 {
@@ -9,15 +13,18 @@ function Header()
     {   
         var scroll = window.scrollY;
         const header = document.getElementsByTagName("header").item(0);
+        const headerLogo = document.getElementsByClassName("header--logo").item(0);
         
         if(scroll <= 50) 
         {
             header.style = "background: rgba(255, 255, 255, 0); color: snow"
+            headerLogo.src = logo;
         } 
         
         else 
         {
             header.style = "background: rgba(255, 255, 255, 1); color: rgb(35, 35, 35)"
+            headerLogo.src = logoTwo;
         }
     };
 
@@ -29,13 +36,13 @@ function Header()
 
         const target = evento.target;
 
-        if(!target.classList.contains(".header--menu---item") && !target.classList.contains(".dropdown--menu"))
+        if(!target.classList.contains(".dropdown--menu"))
         {
             const arrayDropdrown = document.getElementsByClassName("dropdown--menu");
 
             for(let i = 0; i < arrayDropdrown.length; i++)
             {
-                arrayDropdrown.item(i).style = "opacity: 0; pointer-event: none;";
+                arrayDropdrown.item(i).style = "opacity: 0; pointer-events: none;";
             }
         }
        
@@ -77,10 +84,10 @@ function Header()
 
     return (
         <header>
-            <div className="header--menu" onMouseOver={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-                <h3>TopAI</h3>
+            <div className="header--menu" onMouseOver={mouseEnterHandler} >
+                <div className="header--title---container"><img className="header--logo" src={logo}></img></div>
 
-                <div className="dropdown stable" >
+                <div className="dropdown stable" onMouseLeave={mouseLeaveHandler}>
                     <a className="header--menu---item" >Editing tools <img src={arrow}></img></a>
                     <div className="dropdown--menu">
                         <section className="dropdown--menu---section">
@@ -108,7 +115,7 @@ function Header()
                     </div>
                 </div>
 
-                <div className="dropdown stable" >
+                <div className="dropdown stable" onMouseLeave={mouseLeaveHandler}>
                     <a className="header--menu---item">Create <img src={arrow}></img></a>
                     <div className="dropdown--menu" >
                         <section className="dropdown--menu---section">
@@ -155,7 +162,7 @@ function Header()
                     </div>
                 </div>
 
-                <div className="dropdown" >
+                <div className="dropdown" onMouseLeave={mouseLeaveHandler}>
                     <a className="header--menu---item" >AI Tools <img src={arrow}></img></a>
                     <div className="dropdown--menu">
                         <div className="dropdown--menu---options">
@@ -167,7 +174,7 @@ function Header()
                     </div>
                 </div>
 
-                <div className="dropdown" >
+                <div className="dropdown" onMouseLeave={mouseLeaveHandler}>
                     <a  className="header--menu---item" >Templates <img src={arrow}></img></a>
                     <div className="dropdown--menu">
 
@@ -220,7 +227,7 @@ function Header()
                     </div>
                 </div>
 
-                <div className="dropdown">
+                <div className="dropdown" onMouseLeave={mouseLeaveHandler}>
                     <a className="header--menu---item" >Support <img src={arrow}></img></a>
                     <div className="dropdown--menu">
                         <div className="dropdown--menu---options">

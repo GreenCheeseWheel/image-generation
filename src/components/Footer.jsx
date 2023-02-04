@@ -1,6 +1,9 @@
 import React from "react";
 import "../css/footer.css"
 
+import logo from "../assets/logo.svg"
+import youtube from "../assets/social_networks/youtube.svg"
+import twitter from "../assets/social_networks/twitter.svg"
 
 function Footer()
 {
@@ -18,8 +21,14 @@ function Footer()
 
             <section className="footer--listing">
                 <ul className="listing--list stable">
-                    <li className="listing--item listing--title">TopAI</li>
-                    <li className="listing--item"><span>All-in-one photo editor for easy editing and better design</span></li>
+                    <li className="listing--title"><img className="footer--logo" src={logo}></img> </li>
+                    <li className="noclick">All-in-one photo editor for easy editing and better design</li>
+                    <li className="noclick">
+                        <ul className="footer--social">
+                            <li className="social--item"><img className="social--logo" src={twitter}></img></li>
+                            <li className="social--item"><img className="social--logo" src={youtube}></img></li>
+                        </ul>
+                    </li>
                 </ul>
                 <ul className="listing--list stable">
                     <li className="listing--item listing--title">Company</li>

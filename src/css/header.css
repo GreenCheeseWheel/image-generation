@@ -43,6 +43,23 @@ header {
     color: inherit;
 }
 
+.header--title---container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    align-items: center;
+}
+
+.header--title {
+    font-size: 25px;
+    text-align: center;
+}
+
+.header--logo {
+    height: 35px;
+}
+
 
 .header--menu---item {
     height: 100%;
