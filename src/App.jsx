@@ -10,13 +10,14 @@ export const Contexto = createContext();
 
 export default function App()
 {   
-    const [imageUrl, setImageUrl] = useState(defaultLogo);
+    const [imageUrl, setImageUrl] = useState(null);
+    const [result, setResult] = useState(null);
     
     return (            
         
         <>
         
-            <Contexto.Provider value={{imageUrl, setImageUrl}}> 
+            <Contexto.Provider value={{imageUrl, setImageUrl, result, setResult}}> 
 
                 <BrowserRouter >
                     <Routes>
